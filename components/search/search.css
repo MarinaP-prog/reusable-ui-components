@@ -1,0 +1,21 @@
+.nav-search {
+    color: #f2f2f2;
+    text-align: left;
+    margin: 0.5rem 1rem;
+    text-decoration: none;
+    font-size: 17px;
+    position: relative;
+}
+
+.nav-search {
+    padding: 0.3rem;
+}
+
+.nav-search .item {
+
+    margin-right: 1rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid grey;
+}

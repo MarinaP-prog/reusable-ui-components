@@ -1,0 +1,61 @@
+/************* TABS *************/
+
+.tabs {
+    overflow: hidden;
+    background-color: #f1f1f1;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+/************* TABS CONTENT *************/
+
+.tab-content {
+    display: none;
+    padding: 6px 12px;
+    border-top: 1px solid #ccc;
+    background-color: #f9f9f9;
+
+}
+
+.tab-content.visible {
+    display: block;
+    height: 14rem;
+    overflow: scroll;
+}
+
+.tab-content p,
+.tab-content h3 {
+    padding: 0.5rem 0;
+}
+
+/************* BUTTONS *************/
+
+.tabs button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.tabs button:hover {
+    background-color: #ddd;
+}
+
+.tabs button.active {
+    background-color: #ccc;
+}
+
+/************* BUTTON CLOSE *************/
+
+.topRight {
+    float: right;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.topRight:hover {
+    color: red;
+}

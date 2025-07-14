@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Reusable Components UI</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="./components/accordion/accordion.css"/>
+    <link rel="stylesheet" href="./components/burger/burger.css"/>
+    <link rel="stylesheet" href="components/pagination/pagination.css"/>
+    <link rel="stylesheet" href="./components/navigation/navigation.css">
+    <link rel="stylesheet" href="./components/tabs/tabs.css">
+    <link rel="stylesheet" href="./components/blog/blog.css">
+    <link rel="stylesheet" href="./components/search/search.css">
+</head>
+<body>
+<header>
+    <nav>
+        <div class="burger-content" id="burger-container" aria-label="Open menu">
+        </div>
+        <div id="nav-container"></div>
+    </nav>
+
+</header>
+<div class="main-container">
+    <div class="layout">
+        <main id="main-content">
+            <div class="search-container content">
+                <h2>Search articles:</h2>
+                <div id="search-container"></div>
+            </div>
+            <div class="title content">
+                <div class="subtitle">On mobile, you’ll see a burger menu instead of the accordion menu.</div>
+                <div class="subtitle">You can add your posts here. Click the "Plus" button.</div>
+                <div class="posts">
+                    <h2>Create a post</h2>
+                    <button type="button" aria-label="Add new post" id="add-post-btn">
+                        <img src="images/plus-square-svgrepo-com.svg">
+                    </button>
+                </div>
+                <div>
+                    <div id="articles-container" class="card-container"></div>
+                    <div id="form-container"></div>
+                    <div id="articles" class="articles-container"></div>
+                </div>
+                <div class="pagination" id="pagination">
+                </div>
+            </div>
+
+
+            <div class="content">
+                <div id="tab-content" class="panel-box">
+                </div>
+            </div>
+            <div id="feed" class="content"></div>
+            <h2>Slider</h2>
+            <section id="slider-container" class="slider-section content"></section>
+            <section class="content">
+                <h2 id="faq">Accordion - FAQ</h2>
+                <div id="accordion-container"></div>
+            </section>
+
+        </main>
+    </div>
+</div>
+
+<script type="module" src="index.js"></script>
+</body>
+</html>

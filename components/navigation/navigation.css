@@ -1,0 +1,48 @@
+.main-nav {
+    overflow: hidden;
+    background-color: #333333;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.main-nav a,
+.main-nav div {
+    color: #f2f2f2;
+    text-align: left;
+    margin: 0.5rem 1rem;
+    text-decoration: none;
+    font-size: 17px;
+    position: relative;
+}
+
+
+.nav-links {
+    display: flex;
+    align-items: flex-start;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    left: 0;
+    bottom: -12px;
+    width: 0%;
+    background: #3498db;
+    transition: width 0.3s ease-in-out;
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        display: none;
+    }
+
+}

@@ -1,0 +1,73 @@
+/************* BURGER *************/
+
+.burger-nav {
+    display: none;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    flex-direction: column;
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+.burger-nav .links {
+    display: flex;
+    flex-direction: column;
+}
+
+.burger-nav .links.hidden {
+    display: none;
+}
+
+
+.burger-nav a {
+    color: white;
+    margin: 1rem;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.burger-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+button svg {
+    fill: white;
+    display: block;
+    position: absolute;
+    right: 0.4rem;
+    top: 0.6rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+
+.active {
+    color: white;
+}
+
+/************* DROPDOWN *************/
+
+.dropdown.open {
+    display: flex;
+}
+
+/************* MEDIA *************/
+
+@media (max-width: 768px) {
+    .burger-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        min-height: 3rem;
+    }
+
+    .main-nav {
+        display: none;
+    }
+}

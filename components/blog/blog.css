@@ -1,0 +1,158 @@
+/************* BLOG *************/
+
+.card {
+    border: 1px solid #ddd;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/************* POST FORM *************/
+
+.post-title {
+    color: #333;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.post-title:hover {
+    -ms-transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+}
+
+.title,
+.category1 {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.title input,
+.category1 input,
+.postDescription,
+.article-content {
+    font-family: 'Arial', sans-serif;
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.postDescription {
+    min-height: 200px;
+}
+
+.postheading {
+    color: #333;
+    font-weight: bold;
+}
+
+.postTitle:focus,
+.postCategory:focus,
+.postDescription:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.6);
+}
+
+/************* ARTICLE CONTENT *************/
+
+.article-content {
+    white-space: pre-line;
+    text-align: left;
+    margin-top: 1rem;
+    line-height: 1.6;
+    max-height: 16rem;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.article-content.expanded {
+    max-height: none;
+    overflow: visible;
+}
+
+/************* BUTTONS *************/
+
+.btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.btn {
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.visible {
+    display: none;
+}
+
+/************* BUTTON SUBMIT *************/
+
+.postSubmitBtn {
+    background-color: #3498db;
+}
+
+.postSubmitBtn:hover {
+    background-color: #2980b9;
+}
+
+/************* BUTTON DELETE *************/
+
+.delete-post {
+    background-color: #e74c3c;
+}
+
+.delete-post:hover {
+    background-color: #c0392b;
+}
+
+.post-message {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    z-index: 1000;
+}
+
+/************* BUTTON LOAD MORE *************/
+
+.read-more {
+    display: inline-block;
+    color: #3498db;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.read-more:hover {
+    color: #2980b9;
+    -ms-transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+}
