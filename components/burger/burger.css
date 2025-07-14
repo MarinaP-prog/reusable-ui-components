@@ -65,6 +65,7 @@ button svg {
         gap: 1rem;
         padding: 1rem;
         min-height: 3rem;
+        z-index: 1;
     }
 
     .main-nav {

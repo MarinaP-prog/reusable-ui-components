@@ -177,7 +177,6 @@ h2 {
 .search-container {
     display: none;
     position: relative;
-    z-index: -1;
 }
 
 /************* MEDIA *************/
