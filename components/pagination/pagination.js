@@ -107,7 +107,7 @@ export function createPagination() {
 
 
     return {
-        element: wrapper,
+        element: wrapper, // whole html pagination
         updatePagination: renderPagination // Exposed for external calls, such as when new content is added dynamically
     }
 }

@@ -7,6 +7,7 @@ import {createPagination} from "../pagination/pagination.js";
 export function createBlog() {
     const container = document.createElement('div');
     container.classList.add('blog');
+
     // form
     const containerForm = createFormItem(handleNewArticle);
     containerForm.classList.add('card');
