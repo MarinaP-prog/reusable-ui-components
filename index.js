@@ -5,6 +5,8 @@ import {createNavigation} from "./components/navigation/navigation.js";
 import {createBlog} from "./components/blog/blog.js";
 import {createPagination} from "./components/pagination/pagination.js";
 import {createSearch} from "./components/search/search.js";
+import {getArticlesFromStorage} from "./utils/blogUtils.js";
+
 // accordion
 const accordionData = [
     {title: 'What is this?', content: 'This is an accordion component.'},
@@ -89,7 +91,9 @@ const pagination = document.querySelector('#pagination');
 const blog = document.getElementById('articles-container');
 blog.appendChild(createBlog());
 const paginationComponent = createPagination();
-pagination.append(paginationComponent.element);
+if (paginationComponent && getArticlesFromStorage().length > 0) {
+    pagination.append(paginationComponent.element);
+}
 
 
 

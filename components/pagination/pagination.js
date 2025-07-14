@@ -36,6 +36,7 @@ export function createPagination() {
     const totalPages = Math.ceil(cards.length / cardsPerPage);
     let currentPage = 1;
 
+
     function displayPage(page) {
         const startIndex = (page - 1) * cardsPerPage;
         const endIndex = startIndex + cardsPerPage;
@@ -44,7 +45,7 @@ export function createPagination() {
         });
     }
 
-    function renderPagination() { // updatePagination
+    function renderPagination() {
         paginationWrapper.innerHTML = '';
         pageNumbers.textContent = `Page ${currentPage} of ${totalPages}`;
 
@@ -83,6 +84,7 @@ export function createPagination() {
         nextBtn.disabled = currentPage === totalPages;
     }
 
+
     prevBtn.addEventListener('click', () => {
         if (currentPage > 1) {
             currentPage--;
@@ -102,6 +104,7 @@ export function createPagination() {
     // initialize
     displayPage(currentPage);
     renderPagination();
+
 
     return {
         element: wrapper,

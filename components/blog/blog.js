@@ -25,11 +25,25 @@ export function createBlog() {
         containerForm.classList.toggle('visible');
     })
 
+    function updatePaginationDisplay() {
+        const pagination = document.querySelector('#pagination');
+        pagination.innerHTML = '';
+
+        const cards = articlesWrapper.querySelectorAll('.card');
+        const hasArticles = [...cards].some(card => !card.matches('form'));
+
+        if (hasArticles) {
+            const {element: paginationElement} = createPagination();
+            pagination.append(paginationElement);
+        }
+    }
+
     function handleNewArticle(article) {
         const articles = getArticlesFromStorage();
         articles.push(article);
         saveArticleToStorage(article);
         articlesWrapper.prepend(createArticleItem(article));
+        updatePaginationDisplay();
 
     }
 
@@ -40,15 +54,16 @@ export function createBlog() {
         const filtered = displayFilteredArticles(query, allArticles)
 
         articlesWrapper.innerHTML = '';
-        filtered.forEach(article => {
-            articlesWrapper.appendChild(createArticleItem(article));
-        })
 
-        const pagination = document.querySelector('#pagination');
-        pagination.innerHTML = '';
-
-        const {element: paginationElement} = createPagination(); // new pagination
-        pagination.append(paginationElement);
+        if (filtered.length === 0) {
+            document.querySelector('#articles-found').classList.add('visible');
+        } else {
+            document.querySelector('#articles-found').classList.remove('visible');
+            filtered.forEach(article => {
+                articlesWrapper.appendChild(createArticleItem(article));
+            })
+        }
+        updatePaginationDisplay();
     })
 
     const form = document.querySelector('#form-container');

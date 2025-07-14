@@ -31,7 +31,7 @@ Each component is:
 
 - **`blog/`**  
   Dynamically generated blog cards.  
-  Displays title, content preview, and a buttons.  
+  Displays title, content preview, and buttons.  
   Full post is shown directly on the page (not via modal).
 
 - **`search/`**  
