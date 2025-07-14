@@ -19,7 +19,7 @@ const createNavLinks = (items) => {
             wrapper.classList.add('dropdown-wrapper');
 
             const img = document.createElement('img');
-            img.setAttribute('src', '../images/chevron-right.png');
+            img.setAttribute('src', './images/chevron-right.png');
             img.classList.add('arrow');
 
             wrapper.appendChild(img);
