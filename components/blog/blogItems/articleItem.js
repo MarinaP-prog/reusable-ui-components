@@ -20,10 +20,12 @@ export function createArticleItem({title, author, content, date}) {
 
     // read more
     const readMore = document.createElement('button');
-    readMore.textContent = 'Read more';
-    readMore.classList.add('read-more');
-
+    
     if (isTruncated) {
+
+        readMore.textContent = 'Read more';
+        readMore.classList.add('read-more');
+
         readMore.addEventListener('click', () => {
             const isExpanded = readMore.textContent === 'Read more';
             p.classList.toggle('expanded', isExpanded);
