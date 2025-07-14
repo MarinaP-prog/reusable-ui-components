@@ -1,5 +1,5 @@
 export function createArticleItem({title, author, content, date}) {
-    const shortDesc = content.slice(0, 100); // articleItem.js:2 Uncaught TypeError: Cannot read properties of undefined (reading 'slice' at createArticleItem (articleItem.js:2:31)at blog.js:39:9at HTMLButtonElement.<anonymous> (navigation.js:30:16)
+    const shortDesc = content.slice(0, 100);
     const isTruncated = content.length > 100;
 
     const article = document.createElement('article');

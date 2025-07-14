@@ -22,12 +22,12 @@ export function createSearch() {
     navSearch.appendChild(searchBtn);
 
     input.addEventListener("keyup", (e) => {
-        if (e.key === 'Enter' || e.key === '') {
+        if (e.key === 'Enter') {
             handleSearch();
         }
     })
-    searchBtn.addEventListener("click", (e) => {
-        handleSearch(e);
+    searchBtn.addEventListener("click", () => {
+        handleSearch();
     });
 
     function handleSearch() {
